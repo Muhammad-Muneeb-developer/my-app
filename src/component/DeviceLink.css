@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.main-div {
+    width: 100%;
+    height: auto;
+}
+
+.nav-bar-Device {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #172b4d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar-Device img {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-bar-Device h1 {
+    color: white;
+    flex-grow: 1;
+    margin-left: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.search-container {
+    margin-left: auto;
+}
+
+.search-container input {
+    padding: 15px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.online-button {
+    margin-left: 20px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.online-button:hover {
+    background-color: #218838;
+}
+
+.main-card-div {
+    width: 100%;
+    background-color: #3b547c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.small-card {
+    background-color: white;
+    width: 22%;
+    height: 250px;
+    margin-top: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(105, 71, 199, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.small-card.edit-mode {
+    background-color: #f8f9fa;
+}
+
+.small-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #172b4d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.online-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.name {
+    font-size: 20px;
+    color: #172b4d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.nik-name {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mac {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+.edit-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffc107;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .small-card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .small-card {
+        width: 45%;
+    }
+
+    .nav-bar-Device img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .nav-bar-Device h1 {
+        margin-left: 15px;
+    }
+
+    .search-container input {
+        width: 180px;
+    }
+
+    .online-button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .small-card {
+        width: 90%;
+    }
+
+    .nav-bar-Device img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-bar-Device h1 {
+        margin-left: 10px;
+    }
+
+    .search-container input {
+        width: 150px;
+    }
+
+    .online-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .small-card {
+        width: 100%;
+    }
+
+    .nav-bar-Device {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-bar-Device img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-bar-Device h1 {
+        margin-left: 0;
+        margin-top: 10px;
+       
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+}
